@@ -36,14 +36,14 @@ func main() {
 			left[l] = 1
 		}
 		r, err := strconv.Atoi(nums[1])
+		if err != nil {
+			log.Fatal(err.Error())
+		}
 		_, exist = right[r]
 		if exist {
 			right[r]++
 		} else {
 			right[r] = 1
-		}
-		if err != nil {
-			log.Fatal(err.Error())
 		}
 	}
 	sum := 0
