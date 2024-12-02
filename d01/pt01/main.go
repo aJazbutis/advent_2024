@@ -42,7 +42,7 @@ func main() {
 	slices.Sort(right)
 	sum := 0
 	for i := 0; i < len(left); i++ {
-		sum += int(math.Abs(float64(left[i]) - float64(right[i])))
+		sum += int(math.Abs(float64(left[i] - right[i])))
 	}
 	fmt.Println(sum)
 }
