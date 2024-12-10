@@ -32,8 +32,7 @@ func getTrailheadScore(g *[][]byte, i, j int) int {
 	grid := *g
 	score := 0
 	visited := make(map[Point]bool)
-	toVisit := []Point{}
-	toVisit = append(toVisit, Point{i, j})
+	toVisit := []Point{{i, j}}
 	for len(toVisit) > 0 {
 		current := toVisit[0]
 		toVisit = toVisit[1:]
